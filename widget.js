@@ -28,7 +28,9 @@ var startTransition = function(selectedAnswer){
 		});
 
 	//hide all but the selectedAnswer
-	$(".options li:not('.selected')").delay(250).fadeTo('fast',0, function(){
+	$(".options li:not('.selected')").delay(250).fadeTo(500,0, function(){
+			//hide theese
+			$(".options li:not('.selected')").css({"display":"none"})
 			//slide selectedAnswer up to top
 			selectedAnswer.animate({
 				"top":"20px"
@@ -38,7 +40,7 @@ var startTransition = function(selectedAnswer){
 				//activate Next button
 				$(".next-btn").delay(1000).removeClass("crux-btn-inactive").addClass("crux-btn-special--lg");
 			})
-		}).css({"display":"none"});
+		})
 } //end startTransition
 
 //reload page with 'next btn'
