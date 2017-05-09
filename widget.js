@@ -38,7 +38,7 @@ var startTransition = function(selectedAnswer){
 				//activate Next button
 				$(".next-btn").delay(1000).removeClass("crux-btn-inactive").addClass("crux-btn-special--lg");
 			})
-		});
+		}).css({"display":"none"});
 } //end startTransition
 
 //reload page with 'next btn'
